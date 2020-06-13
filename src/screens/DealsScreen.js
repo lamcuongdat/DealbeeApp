@@ -7,6 +7,12 @@ export default function DealsScreen() {
   return (
     <View style={styles.appContainer}>
       <Header
+        leftContainerStyle={{
+          flex: 5,
+        }}
+        centerContainerStyle={{
+          flex: 95,
+        }}
         placement="left"
         leftComponent={
           <Image
@@ -24,16 +30,21 @@ export default function DealsScreen() {
             placeholder="Search"
             round
             containerStyle={{
-              width: 300,
-              padding: 0,
+              borderBottomColor: "transparent",
+              borderTopColor: "transparent",
+              backgroundColor: "transparent",
+              width: "100%",
+            }}
+            inputContainerStyle={{
+              backgroundColor: "white",
             }}
           />
         }
         statusBarProps={{
           barStyle: "light-content",
           translucent: true,
-          backgroundColor: "transparent",
         }}
+        containerStyle={{}}
       />
     </View>
   );
